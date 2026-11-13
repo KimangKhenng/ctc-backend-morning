@@ -5,7 +5,11 @@ import { posts, likes, categories, comments } from './db.js';
 const app = express()
 
 app.get('/api/posts', (req, res) => {
-    res.status(200).json(posts)
+    res.status(200).json({
+        "success": true,
+        "message": "Post retrieved successfully",
+        "data": posts
+    })
 })
 
 app.get('/api/posts/:id', (req, res) => {
@@ -14,12 +18,16 @@ app.get('/api/posts/:id', (req, res) => {
         return item.id == Id
     })
     if (!post) {
-        return json.status(404).json({
+        return res.status(404).json({
             "success": false,
             "message": "Post not found"
         })
     }
-    return res.json(post)
+    return res.json({
+        "success": true,
+        "message": "Post retrieved successfully",
+        "data": post
+    })
 })
 
 app.get('/hello', (req, res) => {

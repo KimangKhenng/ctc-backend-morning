@@ -4,6 +4,15 @@ import { posts, likes, categories, comments } from './db.js';
 
 const app = express()
 
+// Middleware
+app.use(express.json()); // Parse JSON bodies
+app.use(express.urlencoded({ extended: true })); // Parse URL-encoded bodies
+
+app.post('/api/posts', (req, res) => {
+    console.log(req.body)
+    res.send("Hello post")
+})
+
 app.get('/api/posts', (req, res) => {
     res.status(200).json({
         "success": true,

@@ -4,8 +4,22 @@ import { posts, likes, categories, comments } from './db.js';
 
 const app = express()
 
-app.get('/posts', (req, res) => {
+app.get('/api/posts', (req, res) => {
     res.status(200).json(posts)
+})
+
+app.get('/api/posts/:id', (req, res) => {
+    const Id = req.params.id
+    const post = posts.find((item) => {
+        return item.id == Id
+    })
+    if (!post) {
+        return json.status(404).json({
+            "success": false,
+            "message": "Post not found"
+        })
+    }
+    return res.json(post)
 })
 
 app.get('/hello', (req, res) => {

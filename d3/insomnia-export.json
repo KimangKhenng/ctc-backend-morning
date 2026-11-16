@@ -1,0 +1,534 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2026-11-16T03:02:58.302Z",
+  "__export_source": "manual:blog-api-curl-conversion",
+  "resources": [
+    {
+      "_id": "wrk_blog_api",
+      "_type": "workspace",
+      "name": "Blog API",
+      "description": "",
+      "scope": "collection",
+      "parentId": null
+    },
+    {
+      "_id": "fld_categories",
+      "_type": "request_group",
+      "parentId": "wrk_blog_api",
+      "name": "Categories",
+      "description": "",
+      "metaSortKey": 0
+    },
+    {
+      "_id": "fld_posts",
+      "_type": "request_group",
+      "parentId": "wrk_blog_api",
+      "name": "Posts",
+      "description": "",
+      "metaSortKey": 1000
+    },
+    {
+      "_id": "fld_post_comments",
+      "_type": "request_group",
+      "parentId": "wrk_blog_api",
+      "name": "Post comments",
+      "description": "",
+      "metaSortKey": 2000
+    },
+    {
+      "_id": "fld_comments",
+      "_type": "request_group",
+      "parentId": "wrk_blog_api",
+      "name": "Comments by id",
+      "description": "",
+      "metaSortKey": 3000
+    },
+    {
+      "_id": "fld_likes",
+      "_type": "request_group",
+      "parentId": "wrk_blog_api",
+      "name": "Post likes",
+      "description": "",
+      "metaSortKey": 4000
+    },
+    {
+      "_id": "req_blog_01",
+      "_type": "request",
+      "parentId": "wrk_blog_api",
+      "name": "Health check",
+      "description": "",
+      "method": "GET",
+      "url": "http://localhost:3000/",
+      "body": {},
+      "headers": [],
+      "parameters": [],
+      "authentication": {},
+      "metaSortKey": 0,
+      "settings": {
+        "renderRequestBody": true,
+        "encodeUrl": true,
+        "followRedirects": "global",
+        "cookies": {
+          "sending": true,
+          "storing": true
+        }
+      }
+    },
+    {
+      "_id": "req_blog_02",
+      "_type": "request",
+      "parentId": "fld_categories",
+      "name": "List categories",
+      "description": "",
+      "method": "GET",
+      "url": "http://localhost:3000/api/categories",
+      "body": {},
+      "headers": [],
+      "parameters": [],
+      "authentication": {},
+      "metaSortKey": 1000,
+      "settings": {
+        "renderRequestBody": true,
+        "encodeUrl": true,
+        "followRedirects": "global",
+        "cookies": {
+          "sending": true,
+          "storing": true
+        }
+      }
+    },
+    {
+      "_id": "req_blog_03",
+      "_type": "request",
+      "parentId": "fld_categories",
+      "name": "Get category",
+      "description": "",
+      "method": "GET",
+      "url": "http://localhost:3000/api/categories/1",
+      "body": {},
+      "headers": [],
+      "parameters": [],
+      "authentication": {},
+      "metaSortKey": 2000,
+      "settings": {
+        "renderRequestBody": true,
+        "encodeUrl": true,
+        "followRedirects": "global",
+        "cookies": {
+          "sending": true,
+          "storing": true
+        }
+      }
+    },
+    {
+      "_id": "req_blog_04",
+      "_type": "request",
+      "parentId": "fld_categories",
+      "name": "Create category",
+      "description": "",
+      "method": "POST",
+      "url": "http://localhost:3000/api/categories",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\"name\":\"Photography\",\"description\":\"Capturing light and moments\"}"
+      },
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "parameters": [],
+      "authentication": {},
+      "metaSortKey": 3000,
+      "settings": {
+        "renderRequestBody": true,
+        "encodeUrl": true,
+        "followRedirects": "global",
+        "cookies": {
+          "sending": true,
+          "storing": true
+        }
+      }
+    },
+    {
+      "_id": "req_blog_05",
+      "_type": "request",
+      "parentId": "fld_categories",
+      "name": "Update category",
+      "description": "",
+      "method": "PUT",
+      "url": "http://localhost:3000/api/categories/1",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\"description\":\"Designing clear, usable interfaces\"}"
+      },
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "parameters": [],
+      "authentication": {},
+      "metaSortKey": 4000,
+      "settings": {
+        "renderRequestBody": true,
+        "encodeUrl": true,
+        "followRedirects": "global",
+        "cookies": {
+          "sending": true,
+          "storing": true
+        }
+      }
+    },
+    {
+      "_id": "req_blog_06",
+      "_type": "request",
+      "parentId": "fld_categories",
+      "name": "Delete category",
+      "description": "",
+      "method": "DELETE",
+      "url": "http://localhost:3000/api/categories/11",
+      "body": {},
+      "headers": [],
+      "parameters": [],
+      "authentication": {},
+      "metaSortKey": 5000,
+      "settings": {
+        "renderRequestBody": true,
+        "encodeUrl": true,
+        "followRedirects": "global",
+        "cookies": {
+          "sending": true,
+          "storing": true
+        }
+      }
+    },
+    {
+      "_id": "req_blog_07",
+      "_type": "request",
+      "parentId": "fld_posts",
+      "name": "List posts",
+      "description": "",
+      "method": "GET",
+      "url": "http://localhost:3000/api/posts",
+      "body": {},
+      "headers": [],
+      "parameters": [],
+      "authentication": {},
+      "metaSortKey": 6000,
+      "settings": {
+        "renderRequestBody": true,
+        "encodeUrl": true,
+        "followRedirects": "global",
+        "cookies": {
+          "sending": true,
+          "storing": true
+        }
+      }
+    },
+    {
+      "_id": "req_blog_08",
+      "_type": "request",
+      "parentId": "fld_posts",
+      "name": "Get post",
+      "description": "",
+      "method": "GET",
+      "url": "http://localhost:3000/api/posts/1",
+      "body": {},
+      "headers": [],
+      "parameters": [],
+      "authentication": {},
+      "metaSortKey": 7000,
+      "settings": {
+        "renderRequestBody": true,
+        "encodeUrl": true,
+        "followRedirects": "global",
+        "cookies": {
+          "sending": true,
+          "storing": true
+        }
+      }
+    },
+    {
+      "_id": "req_blog_09",
+      "_type": "request",
+      "parentId": "fld_posts",
+      "name": "Create post",
+      "description": "",
+      "method": "POST",
+      "url": "http://localhost:3000/api/posts",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\"title\":\"Sample post\",\"content\":\"Hello from Insomnia.\",\"author\":\"Sokha\",\"categoryId\":1}"
+      },
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "parameters": [],
+      "authentication": {},
+      "metaSortKey": 8000,
+      "settings": {
+        "renderRequestBody": true,
+        "encodeUrl": true,
+        "followRedirects": "global",
+        "cookies": {
+          "sending": true,
+          "storing": true
+        }
+      }
+    },
+    {
+      "_id": "req_blog_10",
+      "_type": "request",
+      "parentId": "fld_posts",
+      "name": "Update post",
+      "description": "",
+      "method": "PUT",
+      "url": "http://localhost:3000/api/posts/1",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\"title\":\"Updated title\"}"
+      },
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "parameters": [],
+      "authentication": {},
+      "metaSortKey": 9000,
+      "settings": {
+        "renderRequestBody": true,
+        "encodeUrl": true,
+        "followRedirects": "global",
+        "cookies": {
+          "sending": true,
+          "storing": true
+        }
+      }
+    },
+    {
+      "_id": "req_blog_11",
+      "_type": "request",
+      "parentId": "fld_posts",
+      "name": "Delete post",
+      "description": "",
+      "method": "DELETE",
+      "url": "http://localhost:3000/api/posts/61",
+      "body": {},
+      "headers": [],
+      "parameters": [],
+      "authentication": {},
+      "metaSortKey": 10000,
+      "settings": {
+        "renderRequestBody": true,
+        "encodeUrl": true,
+        "followRedirects": "global",
+        "cookies": {
+          "sending": true,
+          "storing": true
+        }
+      }
+    },
+    {
+      "_id": "req_blog_12",
+      "_type": "request",
+      "parentId": "fld_post_comments",
+      "name": "List comments on post",
+      "description": "",
+      "method": "GET",
+      "url": "http://localhost:3000/api/posts/1/comments",
+      "body": {},
+      "headers": [],
+      "parameters": [],
+      "authentication": {},
+      "metaSortKey": 11000,
+      "settings": {
+        "renderRequestBody": true,
+        "encodeUrl": true,
+        "followRedirects": "global",
+        "cookies": {
+          "sending": true,
+          "storing": true
+        }
+      }
+    },
+    {
+      "_id": "req_blog_13",
+      "_type": "request",
+      "parentId": "fld_post_comments",
+      "name": "Create comment on post",
+      "description": "",
+      "method": "POST",
+      "url": "http://localhost:3000/api/posts/1/comments",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\"author\":\"Dara\",\"content\":\"Nice post!\"}"
+      },
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "parameters": [],
+      "authentication": {},
+      "metaSortKey": 12000,
+      "settings": {
+        "renderRequestBody": true,
+        "encodeUrl": true,
+        "followRedirects": "global",
+        "cookies": {
+          "sending": true,
+          "storing": true
+        }
+      }
+    },
+    {
+      "_id": "req_blog_14",
+      "_type": "request",
+      "parentId": "fld_comments",
+      "name": "Update comment",
+      "description": "",
+      "method": "PUT",
+      "url": "http://localhost:3000/api/comments/1",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\"content\":\"Edited comment\"}"
+      },
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "parameters": [],
+      "authentication": {},
+      "metaSortKey": 13000,
+      "settings": {
+        "renderRequestBody": true,
+        "encodeUrl": true,
+        "followRedirects": "global",
+        "cookies": {
+          "sending": true,
+          "storing": true
+        }
+      }
+    },
+    {
+      "_id": "req_blog_15",
+      "_type": "request",
+      "parentId": "fld_comments",
+      "name": "Delete comment",
+      "description": "",
+      "method": "DELETE",
+      "url": "http://localhost:3000/api/comments/1",
+      "body": {},
+      "headers": [],
+      "parameters": [],
+      "authentication": {},
+      "metaSortKey": 14000,
+      "settings": {
+        "renderRequestBody": true,
+        "encodeUrl": true,
+        "followRedirects": "global",
+        "cookies": {
+          "sending": true,
+          "storing": true
+        }
+      }
+    },
+    {
+      "_id": "req_blog_16",
+      "_type": "request",
+      "parentId": "fld_likes",
+      "name": "List likes on post",
+      "description": "",
+      "method": "GET",
+      "url": "http://localhost:3000/api/posts/1/likes",
+      "body": {},
+      "headers": [],
+      "parameters": [],
+      "authentication": {},
+      "metaSortKey": 15000,
+      "settings": {
+        "renderRequestBody": true,
+        "encodeUrl": true,
+        "followRedirects": "global",
+        "cookies": {
+          "sending": true,
+          "storing": true
+        }
+      }
+    },
+    {
+      "_id": "req_blog_17",
+      "_type": "request",
+      "parentId": "fld_likes",
+      "name": "Like post",
+      "description": "",
+      "method": "POST",
+      "url": "http://localhost:3000/api/posts/1/likes",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\"userId\":500}"
+      },
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "parameters": [],
+      "authentication": {},
+      "metaSortKey": 16000,
+      "settings": {
+        "renderRequestBody": true,
+        "encodeUrl": true,
+        "followRedirects": "global",
+        "cookies": {
+          "sending": true,
+          "storing": true
+        }
+      }
+    },
+    {
+      "_id": "req_blog_18",
+      "_type": "request",
+      "parentId": "fld_likes",
+      "name": "Unlike post",
+      "description": "",
+      "method": "DELETE",
+      "url": "http://localhost:3000/api/posts/1/likes",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\"userId\":500}"
+      },
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "parameters": [],
+      "authentication": {},
+      "metaSortKey": 17000,
+      "settings": {
+        "renderRequestBody": true,
+        "encodeUrl": true,
+        "followRedirects": "global",
+        "cookies": {
+          "sending": true,
+          "storing": true
+        }
+      }
+    }
+  ]
+}

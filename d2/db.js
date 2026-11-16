@@ -12,16 +12,16 @@ const authors = [
 ]
 
 export const categories = [
-    { id: 1, name: "UI Design", slug: "ui-design" },
-    { id: 2, name: "UX Research", slug: "ux-research" },
-    { id: 3, name: "Branding", slug: "branding" },
-    { id: 4, name: "Typography", slug: "typography" },
-    { id: 5, name: "Color Theory", slug: "color-theory" },
-    { id: 6, name: "Illustration", slug: "illustration" },
-    { id: 7, name: "Motion Design", slug: "motion-design" },
-    { id: 8, name: "Design Systems", slug: "design-systems" },
-    { id: 9, name: "Accessibility", slug: "accessibility" },
-    { id: 10, name: "Web Design", slug: "web-design" },
+    { id: 1, name: "UI Design", slug: "ui-design", description: "Designing clear, usable interfaces" },
+    { id: 2, name: "UX Research", slug: "ux-research", description: "Understanding users through research" },
+    { id: 3, name: "Branding", slug: "branding", description: "Building memorable brand identities" },
+    { id: 4, name: "Typography", slug: "typography", description: "Choosing and using type well" },
+    { id: 5, name: "Color Theory", slug: "color-theory", description: "Using color with purpose" },
+    { id: 6, name: "Illustration", slug: "illustration", description: "Drawing and styling visuals" },
+    { id: 7, name: "Motion Design", slug: "motion-design", description: "Animation and motion in interfaces" },
+    { id: 8, name: "Design Systems", slug: "design-systems", description: "Building consistent, reusable design systems" },
+    { id: 9, name: "Accessibility", slug: "accessibility", description: "Designing for everyone" },
+    { id: 10, name: "Web Design", slug: "web-design", description: "Designing for the web" },
 ]
 
 // Titles per category (index = categoryId - 1)

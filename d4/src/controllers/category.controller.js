@@ -20,9 +20,6 @@ export const createCategory = async (req, res) => {
     if (!isNonEmptyString(name)) return fail(res, 400, 'Category name is required')
     if (typeof description !== 'string') return fail(res, 400, 'Description must be a string')
 
-    const exists = categories.some((item) => item.name.toLowerCase() === name.trim().toLowerCase())
-    if (exists) return fail(res, 409, 'Category name already exists')
-
     const category = {
         name: name.trim(),
         slug: slugify(name),
